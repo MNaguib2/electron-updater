@@ -45,6 +45,7 @@ class MainScreen {
     console.log("showMessage trapped");
     console.log(message);
     this.window.webContents.send("updateMessage", message);
+    this.window.webContents.send("path_test", ' message path test from preload to js html');
   }
 
   close() {

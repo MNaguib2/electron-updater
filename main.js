@@ -35,6 +35,10 @@ autoUpdater.on("update-not-available", (info) => {
   curWindow.showMessage(`No update available. Current version ${app.getVersion()}`);
 });
 
+ipcMain.on('send-data-to-main', (arg, message) => {
+  console.log(/*arg,*/ message);
+})
+
 /*Download Completion Message*/
 autoUpdater.on("update-downloaded", (info) => {
   curWindow.showMessage(`Update downloaded. Current version ${app.getVersion()}`);
